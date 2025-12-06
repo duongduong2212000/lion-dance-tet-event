@@ -1,0 +1,81 @@
+/* ===== STYLE.CSS – Giao diện & hiệu ứng Tết ===== */
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('https://i.imgur.com/w9qQ8ZB.jpeg') center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+#title {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 20px gold, 0 0 40px yellow;
+}
+
+/* Con lân */
+#lion {
+    position: absolute;
+    bottom: 50px;
+    left: -200px;
+    width: 250px;
+    filter: drop-shadow(0 0 10px yellow);
+    animation: moveLion 10s linear infinite;
+}
+
+@keyframes moveLion {
+    0% { left: -200px; }
+    50% { left: calc(100% - 200px); }
+    100% { left: -200px; }
+}
+
+/* Bao lì xì */
+.lixi {
+    position: absolute;
+    width: 90px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hoa mai rơi */
+.flower {
+    position: absolute;
+    width: 30px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
+
+/* Nút điều khiển */
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    background: red;
+    color: yellow;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px gold;
+}
